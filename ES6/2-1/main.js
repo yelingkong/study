@@ -50,3 +50,26 @@
 // 	let monkey='真假美猴王';
 // }
 // console.log(monkey);
+// 
+// 生成十个按钮 每个按钮点击时弹出1-10
+
+// var i = 0;
+// for (i = 1; i <= 10; i++) {
+//     (function(i) {
+//         var but = document.createElement('button');
+//         but.innerText = i;
+//         but.onclick = function() {
+//             alert(i);
+//         };
+//         document.body.appendChild(but);
+//     })(i);
+// }
+
+for (let i=1;i<=10;i++){
+	var but=document.createElement('button');
+	but.innerText=i;
+	but.onclick=function(){
+		alert(i);
+	};
+	document.body.appendChild(but);
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>let应用</title>
+</head>
+
+<body>
+    <ul id='ul'>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>jquery</li>
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>ES6</li>
+    </ul>
+    <style>
+    .cc {
+        color: red;
+        font-size: 18px;
+    }
+    </style>
+    <script>
+    onload = function() {
+        let lis = document.getElementsByTagName('li');
+        let innerh;
+        let funny = function(i) {
+            lis[i].onmouseover = function() {
+                lis[i].classList.add('cc');
+                innerh = lis[i].innerHTML;
+                lis[i].innerHTML = innerh + '我是第' + i + '个';
+            };
+            lis[i].onmouseout = function() {
+                lis[i].classList.remove('cc');
+                lis[i].innerHTML = innerh;
+            }
+        }
+        for (let i = 0; i < lis.length; i++) {
+            funny(i);
+        }
+    }
+    </script>
+</body>
+
+</html>
